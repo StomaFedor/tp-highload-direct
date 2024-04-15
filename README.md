@@ -199,12 +199,35 @@ RPS:
 
 Для шифрования будем использовать Let`s Encrypt. Так же будем использовать Session Cache для улучшения производительности и ускорения подключения.
 ## Логическая схема базы данных <a name="5"></a>
-![drawSQL-image-export-2024-04-15](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/1017aeb4-39c6-43e3-8b69-a27e41f135ba)
+![drawSQL-image-export-2024-04-15 (1)](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/ac7297c2-f153-464c-9160-70280d0ebdf1)
+  
 
 
 ## Физическая схема базы данных <a name="6"></a>
 
+| СУБД       | Функционал | Таблицы | Производительность | Нагрузка на чтение(RPS) | Нагрузка на запись(RPS) |
+| ---------- | ---------- | ------- | ------------------ | ------------------ | ------------------ |
+| PostgreSQL   | Хранение данных пользователя, данных о компании, рекламных объявлений | users, companies, ads, file_info | Редкоизменяемые таблицы, основная нагрузка идет на чтение. Горизонтальное масштабирование, шардирование | 57407 | 41 |
+| Redis   | Хранение сессий пользователя | sessions | Полностью помещается в оперативную память | 110 | 41 |
+| ClickHouse | Хранение статистики рекламной кампании | statistics, statistics_gender, statistics_cities, statistics_time, statistics_age, statistics_keyphases | Шардирование данных | 69 | 61999 |
+| ElasticSearch  | Хранение ключевых слов, фраз и минус-слов | phases, keywords | Позволит производить быстрый подбор и поиск рекламы | 57476 | 41 |
+| S3  | Хранение файлов | files | Масштабируемость, снижение нагрузки на PostgreSQL | 57476 | 41 |
+  
+### Индексы
 
+| Таблица | Индекс |
+|------------|-----------------|
+|Users|login|
+|Companies|user_id|
+|Ads|company_id|
+|File_info|ad_id|
+|Statistics|ad_id|
+|Statistics_age|ad_id|
+|Statistics_time|ad_id|
+|Statistics_cities|ad_id|
+|Statistics_gender|ad_id|
+|Statistics_keyphases|phrase_id|
+  
 ## Алгоримты <a name="7"></a>
 
 
