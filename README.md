@@ -207,7 +207,8 @@ RPS:
 
 Для шифрования будем использовать Let`s Encrypt. Так же будем использовать Session Cache для улучшения производительности и ускорения подключения.
 ## Логическая схема базы данных <a name="5"></a>
-![drawSQL-image-export-2024-04-15 (1)](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/ac7297c2-f153-464c-9160-70280d0ebdf1)
+![image (1)](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/b49b1fbd-263f-4d2e-a012-a2f0b308d7b3)
+
   
 ## Размер таблиц  
 [Расчёт нагрузки](#2)
