@@ -302,7 +302,7 @@ RPS:
 |Vault | Хранение секретов | обеспечивает безопасное хранение и управление доступом к секретам и конфиденциальным данным в распределенных системах |
 
 ## Схема проекта <a name="9"></a>
-![image](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/ead76feb-b117-4273-9bc9-9c8cdb88fe9e)
+![image](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/85b351bd-db0a-4a3a-8c2f-4fef226dc8b4)
 
 
 ## Обеспечение надёжности <a name="10"></a>
