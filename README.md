@@ -310,7 +310,7 @@ RPS:
 |------------|-----------------|
 | PostgeSQL | репликация (master - slave) |
 | Redis | репликация (master - slave) |
-| ClickHouse | внутренняя (master - slave) |
+| ClickHouse | репликация (master - slave) |
 | S3 | репликация (master - slave) |
 | PostgeSQL | репликация (master - slave) |
 | ElasticSearch | репликация индексов |
