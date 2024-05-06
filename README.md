@@ -302,8 +302,7 @@ RPS:
 |Vault | Хранение секретов | обеспечивает безопасное хранение и управление доступом к секретам и конфиденциальным данным в распределенных системах |
 
 ## Схема проекта <a name="9"></a>
-![image](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/85b351bd-db0a-4a3a-8c2f-4fef226dc8b4)
-
+![image](https://github.com/StomaFedor/tp-highload-direct/assets/107150041/7f71e457-93a1-4cb3-ad00-276d4a64a9a9)
 
 ## Обеспечение надёжности <a name="10"></a>
 Для релиза новых версий и отказа отдельных компонентов будет использоваться Graceful Shutdown.
