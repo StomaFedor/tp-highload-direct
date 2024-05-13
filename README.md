@@ -366,6 +366,7 @@ RPS:
 | ElasticSearch      | own     | AMD EPYC 9754 - 128 Cores, 2.25/3.10GHz/ CyberServe EPYC EP1 | 128     | 10   |  15 571        |   800      |
 | Redis      | own     | AMD EPYC 9334 - 32 Cores, 2.70/3.90GHz/ CyberServe EPYC EP1 | 32     | 1   |  5 994          |    360     |
 | S3      | own     | AMD EPYC 9754 - 128 Cores, 2.25/3.10GHz/ CyberServe EPYC EP1 | 128     | 9   |  15 571         |    800     |
+  
 Стоимость покупки серверов:  
 `(10 + 10 + 8 + 10 + 13 + 10 + 9) * 15 571 + 3 * 5 994 = 1 107 952 $`
 
